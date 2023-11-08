@@ -109,5 +109,36 @@ To add a new host to monitor, go to the Hosts menu in the Setup menu on the left
 
 
 
+## Step 6 — Monitoring a Second CentOS Host
+
+On your CentOS server, install xinetd
+
+```
+sudo dnf install -y xinetd
+```
+
+Now you can download and install the monitoring agent package needed for the CentOS server
+```
+sudo dnf install -y http://your_ubuntu_server_ip/monitoring/check_mk/agents/check-mk-agent-2.0.0p18-1.noarch.rpm
+sudo check_mk_agent
+```
+
+```
+sudo vi /etc/xinetd.d/check_mk
+
+...
+# configure the IP address(es) of your Nagios server here:
+only_from      = your_ubuntu_server_ip
+...
+```
+sudo systemctl restart xinetd
+
+Firewall
+```
+sudo firewall-cmd --add-port=6556/tcp --permanent
+sudo firewall-cmd --reload
+```
+
+
 
 
