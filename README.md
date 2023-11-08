@@ -3,7 +3,7 @@
 ## Links
 
 - https://www.digitalocean.com/community/tutorials/how-to-monitor-server-health-with-checkmk-2-0-on-ubuntu-20-04?ref=dailydev#prerequisites
-- 
+- https://linuxhandbook.com/monitor-ssl-certificates-checkmk/?ref=dailydev
 
 ## Prerequisites
 
