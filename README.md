@@ -14,6 +14,7 @@
 ## Step 1 — Installing Checkmk on Ubuntu
 
 ```
+apt update
 # NOT FOUND !!! wget https://download.checkmk.com/checkmk/2.0.0p18/check-mk-raw-2.0.0p18_0.focal_amd64.deb
 wget https://download.checkmk.com/checkmk/2.2.0p14/check-mk-raw-2.2.0p14_0.focal_amd64.deb
 sudo apt install -y ./check-mk-raw-2.0.0p18_0.focal_amd64.deb
